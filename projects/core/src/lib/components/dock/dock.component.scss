@@ -4,13 +4,16 @@
   border-radius: 15px;
   padding: 10px;
   backdrop-filter: blur(10px) saturate(120%);
-  grid-column-gap: 10px;
   position: fixed;
   bottom: 20px;
 }
 
 .labs-item {
   position: relative;
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
 }
 
 labs-badge {
