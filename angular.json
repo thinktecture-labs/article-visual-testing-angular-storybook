@@ -13,7 +13,10 @@
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/core/tsconfig.lib.json",
-            "project": "projects/core/ng-package.json"
+            "project": "projects/core/ng-package.json",
+            "styles": [
+              "projects/core/src/lib/styles/variables.scss"
+            ]
           },
           "configurations": {
             "production": {
