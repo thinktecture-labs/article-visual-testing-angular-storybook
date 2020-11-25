@@ -30,4 +30,5 @@ Default.parameters = {
   viewport: {
     defaultViewport: 'mobile1',
   },
+  chromatic: { viewports: [320] },
 };
