@@ -277,6 +277,55 @@
             "templateData": ""
         },
         {
+            "name": "ChipComponent",
+            "id": "component-ChipComponent-ec13bd9d110b037e7751839914b9f305",
+            "file": "projects/core/src/lib/components/chip/chip.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "labs-chip",
+            "styleUrls": [
+                "chip.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "chip.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "count",
+                    "line": 11,
+                    "type": "number"
+                },
+                {
+                    "name": "label",
+                    "line": 10,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import {Component, Input} from '@angular/core';\n\n@Component({\n  selector: 'labs-chip',\n  templateUrl: 'chip.component.html',\n  styleUrls: ['chip.component.scss'],\n})\n\nexport class ChipComponent {\n  @Input() label: string;\n  @Input() count: number;\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ":host {\n  display: inline-flex;\n  justify-content: center;\n  grid-column-gap: 10px;\n  color: white;\n  border: 1px solid gray;\n  padding: 10px 8px 10px 10px;\n  border-radius: 30px;\n}\n",
+                    "styleUrl": "chip.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "{{label}}\n<labs-badge [value]=\"count\"></labs-badge>\n"
+        },
+        {
             "name": "DockComponent",
             "id": "component-DockComponent-ec1390c3702b26ceaefa808d27d4ded6",
             "file": "projects/core/src/lib/components/dock/dock.component.ts",
@@ -313,7 +362,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host {\n  display: inline-flex;\n  background: rgba(0, 0, 0, .1);\n  border-radius: 15px;\n  padding: 10px;\n  backdrop-filter: blur(10px) saturate(120%);\n  grid-column-gap: 10px;\n  position: fixed;\n  bottom: 20px;\n}\n\n.labs-item {\n  position: relative;\n}\n\nlabs-badge {\n  position: absolute;\n  right: -8px;\n  top: -8px;\n}\n",
+                    "data": ":host {\n  display: inline-flex;\n  background: rgba(0, 0, 0, .1);\n  border-radius: 15px;\n  padding: 10px;\n  backdrop-filter: blur(10px) saturate(120%);\n  position: fixed;\n  bottom: 20px;\n}\n\n.labs-item {\n  position: relative;\n\n  &:not(:first-child) {\n    margin-left: 10px;\n  }\n}\n\nlabs-badge {\n  position: absolute;\n  right: -8px;\n  top: -8px;\n}\n",
                     "styleUrl": "dock.component.scss"
                 }
             ],
@@ -593,6 +642,14 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/core/src/lib/components/chip/chip.component.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/core/src/lib/components/badge/badge.component.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -609,17 +666,17 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/foo-app/src/environments/environment.ts",
+                "file": "projects/foo-app/src/environments/environment.prod.ts",
                 "type": "object",
-                "defaultValue": "{\n  production: false\n}"
+                "defaultValue": "{\n  production: true\n}"
             },
             {
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/foo-app/src/environments/environment.prod.ts",
+                "file": "projects/foo-app/src/environments/environment.ts",
                 "type": "object",
-                "defaultValue": "{\n  production: true\n}"
+                "defaultValue": "{\n  production: false\n}"
             },
             {
                 "name": "Large",
@@ -633,7 +690,7 @@
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Header.stories.ts",
+                "file": "stories/Page.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -641,7 +698,7 @@
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Page.stories.ts",
+                "file": "stories/Header.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -711,25 +768,17 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Header.stories.ts",
-                "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
+                "file": "projects/core/src/lib/components/chip/chip.component.stories.ts",
+                "type": "Story<ChipComponent>",
+                "defaultValue": "(props: ChipComponent) => ({\n  component: ChipComponent,\n  props,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/core/src/lib/components/badge/badge.component.stories.ts",
-                "type": "Story<BadgeComponent>",
-                "defaultValue": "(props: BadgeComponent) => ({\n  component: BadgeComponent,\n  props,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/core/src/lib/components/button/button.component.stories.ts",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(props: ButtonComponent) => ({\n  component: ButtonComponent,\n  props,\n})"
+                "file": "stories/Button.stories.ts",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  component: Button,\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -743,9 +792,25 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Button.stories.ts",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  component: Button,\n  props: args,\n})"
+                "file": "stories/Header.stories.ts",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/core/src/lib/components/button/button.component.stories.ts",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(props: ButtonComponent) => ({\n  component: ButtonComponent,\n  props,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/core/src/lib/components/badge/badge.component.stories.ts",
+                "type": "Story<BadgeComponent>",
+                "defaultValue": "(props: BadgeComponent) => ({\n  component: BadgeComponent,\n  props,\n})"
             }
         ],
         "functions": [],
@@ -804,6 +869,24 @@
                     "defaultValue": "(props: DockComponent) => ({\n  template: `\n    <!-- background hack, use this instead https://github.com/storybookjs/storybook/pull/12663 -->\n    <div style=\"background: url('background.jpg') center center no-repeat;background-size: cover; display: block; position: absolute; left:0;top:0;right:0;bottom: 0;\"></div>\n    <labs-dock [items]=\"items\"></labs-dock>\n  `,\n  props,\n})"
                 }
             ],
+            "projects/core/src/lib/components/chip/chip.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/core/src/lib/components/chip/chip.component.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/core/src/lib/components/chip/chip.component.stories.ts",
+                    "type": "Story<ChipComponent>",
+                    "defaultValue": "(props: ChipComponent) => ({\n  component: ChipComponent,\n  props,\n})"
+                }
+            ],
             "projects/core/src/lib/components/badge/badge.component.stories.ts": [
                 {
                     "name": "Default",
@@ -840,16 +923,6 @@
                     "defaultValue": "(props: ButtonComponent) => ({\n  component: ButtonComponent,\n  props,\n})"
                 }
             ],
-            "projects/foo-app/src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/foo-app/src/environments/environment.ts",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false\n}"
-                }
-            ],
             "projects/foo-app/src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -858,6 +931,16 @@
                     "file": "projects/foo-app/src/environments/environment.prod.ts",
                     "type": "object",
                     "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "projects/foo-app/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/foo-app/src/environments/environment.ts",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
                 }
             ],
             "stories/Button.stories.ts": [
@@ -902,32 +985,6 @@
                     "defaultValue": "(args: Button) => ({\n  component: Button,\n  props: args,\n})"
                 }
             ],
-            "stories/Header.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Header.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Header.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Header.stories.ts",
-                    "type": "Story<Header>",
-                    "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
-                }
-            ],
             "stories/Page.stories.ts": [
                 {
                     "name": "LoggedIn",
@@ -952,6 +1009,32 @@
                     "file": "stories/Page.stories.ts",
                     "type": "Story<Page>",
                     "defaultValue": "(args: Page) => ({\n  component: Page,\n  props: args,\n})"
+                }
+            ],
+            "stories/Header.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Header.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Header.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Header.stories.ts",
+                    "type": "Story<Header>",
+                    "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
                 }
             ]
         },
@@ -1033,6 +1116,35 @@
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/core/src/lib/components/chip/chip.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/core/src/lib/components/chip/chip.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/core/src/lib/components/chip/chip.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ChipComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
