@@ -585,7 +585,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/core/src/lib/components/dock/dock.component.stories.ts",
+                "file": "projects/core/src/lib/components/button/button.component.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -601,7 +601,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/core/src/lib/components/button/button.component.stories.ts",
+                "file": "projects/core/src/lib/components/dock/dock.component.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -727,17 +727,17 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/core/src/lib/components/button/button.component.stories.ts",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(props: ButtonComponent) => ({\n  component: ButtonComponent,\n  props,\n})"
+                "file": "projects/core/src/lib/components/dock/dock.component.stories.ts",
+                "type": "Story<DockComponent>",
+                "defaultValue": "(props: DockComponent) => ({\n  template: `\n    <!-- background hack, use this instead https://github.com/storybookjs/storybook/pull/12663 -->\n    <div style=\"background: url('background.jpg') center center no-repeat;background-size: cover; display: block; position: absolute; left:0;top:0;right:0;bottom: 0;\"></div>\n    <labs-dock [items]=\"items\"></labs-dock>\n  `,\n  props,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/core/src/lib/components/dock/dock.component.stories.ts",
-                "type": "Story<DockComponent>",
-                "defaultValue": "(props: DockComponent) => ({\n  template: `\n    <!-- background hack, use this instead https://github.com/storybookjs/storybook/pull/12663 -->\n    <div style=\"background: url('background.jpg') center center no-repeat;background-size: cover; display: block; position: absolute; left:0;top:0;right:0;bottom: 0;\"></div>\n    <labs-dock [items]=\"items\"></labs-dock>\n  `,\n  props,\n})"
+                "file": "projects/core/src/lib/components/button/button.component.stories.ts",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(props: ButtonComponent) => ({\n  component: ButtonComponent,\n  props,\n})"
             },
             {
                 "name": "Template",
@@ -786,12 +786,12 @@
                     "type": "literal type"
                 }
             ],
-            "projects/core/src/lib/components/dock/dock.component.stories.ts": [
+            "projects/core/src/lib/components/button/button.component.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/core/src/lib/components/dock/dock.component.stories.ts",
+                    "file": "projects/core/src/lib/components/button/button.component.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -799,9 +799,9 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/core/src/lib/components/dock/dock.component.stories.ts",
-                    "type": "Story<DockComponent>",
-                    "defaultValue": "(props: DockComponent) => ({\n  template: `\n    <!-- background hack, use this instead https://github.com/storybookjs/storybook/pull/12663 -->\n    <div style=\"background: url('background.jpg') center center no-repeat;background-size: cover; display: block; position: absolute; left:0;top:0;right:0;bottom: 0;\"></div>\n    <labs-dock [items]=\"items\"></labs-dock>\n  `,\n  props,\n})"
+                    "file": "projects/core/src/lib/components/button/button.component.stories.ts",
+                    "type": "Story<ButtonComponent>",
+                    "defaultValue": "(props: ButtonComponent) => ({\n  component: ButtonComponent,\n  props,\n})"
                 }
             ],
             "projects/core/src/lib/components/badge/badge.component.stories.ts": [
@@ -822,12 +822,12 @@
                     "defaultValue": "(props: BadgeComponent) => ({\n  component: BadgeComponent,\n  props,\n})"
                 }
             ],
-            "projects/core/src/lib/components/button/button.component.stories.ts": [
+            "projects/core/src/lib/components/dock/dock.component.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/core/src/lib/components/button/button.component.stories.ts",
+                    "file": "projects/core/src/lib/components/dock/dock.component.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -835,9 +835,9 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/core/src/lib/components/button/button.component.stories.ts",
-                    "type": "Story<ButtonComponent>",
-                    "defaultValue": "(props: ButtonComponent) => ({\n  component: ButtonComponent,\n  props,\n})"
+                    "file": "projects/core/src/lib/components/dock/dock.component.stories.ts",
+                    "type": "Story<DockComponent>",
+                    "defaultValue": "(props: DockComponent) => ({\n  template: `\n    <!-- background hack, use this instead https://github.com/storybookjs/storybook/pull/12663 -->\n    <div style=\"background: url('background.jpg') center center no-repeat;background-size: cover; display: block; position: absolute; left:0;top:0;right:0;bottom: 0;\"></div>\n    <labs-dock [items]=\"items\"></labs-dock>\n  `,\n  props,\n})"
                 }
             ],
             "projects/foo-app/src/environments/environment.ts": [
